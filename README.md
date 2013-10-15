@@ -1,4 +1,4 @@
-mapserver-html-2000
+The pre-ACMS (2000)
 ===================
 
 This site served as the design basis for the development of the 
