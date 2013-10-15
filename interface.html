@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>first conversion</title>
+</head>
+<body bgcolor="#FFFFFF">
+<h1><IMG WIDTH=216 HEIGHT=108 SRC=world.hammer.png>
+Want to make a map?</h1>
+<br><p>
+</P>
+
+<FORM ACTION="cgi-bin/action.sh" METHOD="GET">
+<center>
+<INPUT TYPE=reset VALUE="Clear">
+<INPUT TYPE=submit VALUE="Let's make the map">
+<br>
+<TABLE BORDER=1 CELLSPACING=0>
+<TR VALIGN=top><TD>
+<h2>Map Projection </h2>
+This option is mandatory<br>
+<INPUT TYPE=radio VALUE=M CHECKED NAME=proj> Mercator <br>
+<INPUT TYPE=radio VALUE=C NAME=proj> Cassini <br>
+<INPUT TYPE=radio VALUE=J NAME=proj> Miller <br>
+<INPUT TYPE=radio VALUE=E NAME=proj> Equidistant <br>
+<INPUT TYPE=radio VALUE=S NAME=proj> Stereographic <br>
+<INPUT TYPE=radio VALUE=G NAME=proj> Orthographic <br>
+<INPUT TYPE=radio VALUE=H NAME=proj> Hammer <br>
+<INPUT TYPE=radio VALUE=W NAME=proj> Mollweide <br>
+<SELECT NAME=SorW>
+<OPTION> Width
+<OPTION> Scale
+</SELECT>
+<INPUT TYPE=text SIZE=3 VALUE=6i NAME=valueSorW> Value <br>
+<TD>
+<h4>Choose one projection and keep in mind the following:</h4>
+Mercator, Cassini and Miller are cylindrical; <br>
+Stereographic, Equidistan  and Orthographic are azimuthal. <br>
+<!--Hammer and Mollweide are miscellaneous.-- >
+<hr>
+<em>Mercator</em> is good for about anything except the poles.<br>
+<em>Cassini</em> is best suited for mapping regions of north-south
+extent. <br>
+<em>Miller</em> is a compromise between the Cassini and Mercator.<br>
+<hr>
+In <em>Orthographic</em>, only one hemisphere can be viewed at any time.<br>
+<em>Stereographic</em> is mainly used for mapping the polar regions. <br>
+<em>Equidistant</em> is useful for a global view of locations. <br>
+<hr>
+<em>Hammer</em> and <em>Mollweide</em> are mainly used for global maps.<br>
+<hr>
+<B>Width or Scale </B><br>
+Choose the plot width and append an <em>i</em> for inches.<br>
+Or choose the scale as 1:xxxxx.<br> 
+<TR VALIGN=top><TD>
+<h2>Region </h2>
+<INPUT TYPE=text MAXLENGTH=4 SIZE=3 VALUE=0 NAME=xmin> Min longitude <br>
+<INPUT TYPE=text MAXLENGTH=4 SIZE=3 VALUE=360 NAME=xmax> Max longitude <br>
+<INPUT TYPE=text MAXLENGTH=4 SIZE=3 VALUE=-70 NAME=ymin> Min latitude <br>
+<INPUT TYPE=text MAXLENGTH=4 SIZE=3 VALUE=70 NAME=ymax> Max latitude <br>
+<TD>
+<!-- 0 &lt;= longitude &lt;= 360 --
+  -- &lt;= latitude &lt;= 90 -- >
+<h4> Must choose a region </h4>
+<em>Longitude</em> must have a range of 360 degrees. <br>
+The lower limit is -180 degrees and the upper limit is 360.<br>
+To specify a central meridian of say 0 degrees, the limits<br>
+should be -180 and 180.<br>
+<hr>
+<em>Latitude</em> limits are -90 an 90 degress where 0 represents<br>
+the Equator.
+</TABLE>
+<br>The following parameters are optional, they make your map prettier and 
+understandable.<br><br> 
+<TABLE BORDER=1 >
+<TR VALIGN=top>
+<TD>
+<h2>Label Information</h2>
+<INPUT TYPE=text SIZE=10 NAME=title> Plot Title<br>
+<INPUT TYPE=text MAXLENGTH=2 SIZE=2 NAME=annot> Annotation spacing<br>
+<INPUT TYPE=text MAXLENGTH=2 SIZE=2 NAME=frame> Frame spacing<br>
+<INPUT TYPE=text MAXLENGTH=2 SIZE=2 NAME=grid> Grid spacing<br>
+
+<TD>
+<h2>Land Color</h2>
+Components between 0 and 255<br>
+<INPUT TYPE=text MAXLENGTH=3 SIZE=3 NAME=lred> Red component/Grey <br>
+<INPUT TYPE=text MAXLENGTH=3 SIZE=3 NAME=lgreen> Green component <br>
+<INPUT TYPE=text MAXLENGTH=3 SIZE=3 NAME=lblue> Blue component <br>
+
+<TD>
+<h2>Water Color</h2>
+Components between 0 and 255<br>
+<INPUT TYPE=text MAXLENGTH=3 SIZE=3 NAME=wred> Red component/Grey <br>
+<INPUT TYPE=text MAXLENGTH=3 SIZE=3 NAME=wgreen> Green component <br>
+<INPUT TYPE=text MAXLENGTH=3 SIZE=3 NAME=wblue> Blue component <br>
+
+<TR ALIGN=left VALIGN=top>
+<TD>
+Tick information and <br>
+plot labelling
+
+<TD COLSPAN=2>
+Range of all values is between 0 and 255. If only the first value<br>
+is included, it is taken as a grey level.
+</TABLE>
+</center>
+<br><br>
+
+<center>
+Choose the type of boundary
+<SELECT NAME=Boundaries>
+<OPTION> None
+<OPTION> National
+<OPTION> State in the Americas
+<OPTION> Marine
+<OPTION> All of the above 
+</SELECT>
+
+</center>
+<center>
+<INPUT TYPE=text NAME=Author VALUE=B.Mancilla>Author<br>
+<INPUT TYPE=reset VALUE="Clear">
+<INPUT TYPE=submit VALUE="Let's make the map">
+</center>
+</FORM>
+</body>
+</html>
+
