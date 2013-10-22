@@ -7,3 +7,6 @@ the Anica Conti Mapping Server.
 
 This is purely html with a cgi script in perl, all written by hand,
 no css or similar at all!
+
+The cgi script requires 'pscoast' from the GMT software suit 
+and pstoimg.
